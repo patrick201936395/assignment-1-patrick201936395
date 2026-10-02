@@ -1,4 +1,173 @@
-/* This is your CSS files */
+/* General layout */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    color: black
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-layout {
+    display: flex;
+    flex: 1;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px 6px 44px;
+    background-color: #dc4c3e;
+    color: #ffffff;
+}
+
+.menu-button {
+    padding: 0;
+    margin-right: 12px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.main-header img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.quick-find {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    min-width: 0;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background-color: #e57368;
+}
+
+.quick-find input {
+    width: 100%;
+    min-width: 0;
+    margin-left: 8px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #ffffff;
+    font: inherit;
+}
+
+.quick-find input::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.task-counter {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+    padding-left: 16px;
+}
+
+.task-counter img {
+    margin-right: 8px;
+}
+
+/* Left navigation */
+.sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    padding: 30px 5px 30px 35px;
+    background-color: #fefbf2;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.sidebar img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.sidebar .active {
+    background-color: #ffffff;
+}
+
+.task-count {
+    margin-left: 5px;
+    font-size: 12px;
+    color: #7e7d79;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 36px 6%;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.task-list li {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.task-list label {
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.task-list input {
+    appearance: none;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.task-list input:checked {
+    background-color: #dc4c3e;
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-header {
+        padding-left: 16px;
+    }
+
+    .main-content {
+        padding: 30px 20px;
+    }
 }

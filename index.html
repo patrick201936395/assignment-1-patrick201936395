@@ -1,9 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Link your CSS file and other references here -->
-    </head>
-    <body>
-        <!-- Content goes here -->
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox - Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <button class="menu-button" type="button" aria-label="Menu">
+            <img src="assets/menu_icon.png" alt="">
+        </button>
+        <label class="quick-find">
+            <img src="assets/search_icon.png" alt="Quick find">
+            <input type="text" placeholder="Quick find">
+        </label>
+        <p class="task-counter">
+            <img src="assets/check_icon.png" alt="Completed tasks">
+            <span>30/5</span>
+        </p>
+    </header>
+
+    <div class="page-layout">
+        <nav class="sidebar" aria-label="Task categories">
+            <ul>
+                <li>
+                    <a class="active" href="#inbox" aria-current="page">
+                        <img src="assets/inbox_icon.png" alt="">
+                        <strong>Inbox</strong>
+                        <span class="task-count">5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/calendar_icon.png" alt="">
+                        Today
+                        <span class="task-count">5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="assets/upcoming_icon.png" alt="">
+                        Upcoming
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content" id="inbox">
+            <h1>Inbox</h1>
+            <ul class="task-list">
+                <li>
+                    <label><input type="checkbox" name="call-mom">Call Mom</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="buy-magazine">Buy the new issue of Scientific American</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="return-textbook">Return the textbook to Josie</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="buy-album">Buy the new album by Rake</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" name="buy-gift-card">Buy a gift card for Dad</label>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
 </html>
